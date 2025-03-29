@@ -338,34 +338,34 @@
     //Mail service 
 
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("contact-form");
-        const loading = document.querySelector(".loading");
-        const errorMessage = document.querySelector(".error-message");
-        const sentMessage = document.querySelector(".sent-message");
+    //document.addEventListener("DOMContentLoaded", function () {
+    //    const form = document.getElementById("contact-form");
+    //    const loading = document.querySelector(".loading");
+    //    const errorMessage = document.querySelector(".error-message");
+    //    const sentMessage = document.querySelector(".sent-message");
 
-        form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent page reload
+    //    form.addEventListener("submit", function (event) {
+    //        event.preventDefault(); // Prevent page reload
 
-            // Show loading message and hide others
-            loading.style.display = "block";
-            errorMessage.style.display = "none";
-            sentMessage.style.display = "none";
+    //        // Show loading message and hide others
+    //        loading.style.display = "block";
+    //        errorMessage.style.display = "none";
+    //        sentMessage.style.display = "none";
 
-            emailjs.sendForm("service_bjk0blr", "template_vp1frte", this)
-                .then(() => {
-                    loading.style.display = "none"; // Hide loading
-                    sentMessage.style.display = "block"; // Show success message
-                    form.reset(); // Reset the form after successful submission
-                })
-                .catch((error) => {
-                    loading.style.display = "none"; // Hide loading
-                    errorMessage.textContent = "Failed to send message. Please try again.";
-                    errorMessage.style.display = "block"; // Show error message
-                    console.error("EmailJS Error:", error);
-                });
-        });
-    });
+    //        emailjs.sendForm("service_bjk0blr", "template_vp1frte", this)
+    //            .then(() => {
+    //                loading.style.display = "none"; // Hide loading
+    //                sentMessage.style.display = "block"; // Show success message
+    //                form.reset(); // Reset the form after successful submission
+    //            })
+    //            .catch((error) => {
+    //                loading.style.display = "none"; // Hide loading
+    //                errorMessage.textContent = "Failed to send message. Please try again.";
+    //                errorMessage.style.display = "block"; // Show error message
+    //                console.error("EmailJS Error:", error);
+    //            });
+    //    });
+    //});
 
 
     // emailjs.sendForm("service_bjk0blr", "template_vp1frte", this)
